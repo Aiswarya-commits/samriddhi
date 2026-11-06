@@ -1,0 +1,65 @@
+/* ===== Samriddhi fixed transparent navbar (all pages) ===== */
+/* Framer's own navbar: invisible but kept in the page (its links let pages switch smoothly) */
+.framer-eg9e2a-container,.framer-e4m5ix-container,
+[class*="-container"]:has(> .framer-JjYoO),[class*="-container"]:has(> .framer-j6MbD){opacity:0!important;pointer-events:none!important;visibility:visible!important}
+.nb,.sp-header{display:none!important}
+/* no loading screen */
+.framer-dd4hfp-container,[data-framer-name="Preloader"],[data-framer-name="loading"]{opacity:0!important;pointer-events:none!important;visibility:hidden!important}
+
+#snav{position:fixed;top:0;left:0;right:0;z-index:2147480000;font-family:"Inter","Geist",system-ui,sans-serif;
+  background:transparent;transition:background .35s,box-shadow .35s,backdrop-filter .35s;--fg:#16365A;--fg2:#5c6b77}
+#snav *{box-sizing:border-box}
+#snav.scrolled{background:rgba(255,255,255,.72);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 1px 0 rgba(22,54,90,.08)}
+#snav.dark{--fg:#fff;--fg2:rgba(255,255,255,.8)}
+#snav.dark.scrolled{background:rgba(10,22,12,.35);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+#snav .sn-in{max-width:1320px;margin:0 auto;height:84px;padding:0 28px;display:flex;align-items:center}
+#snav .sn-logo{flex:none;display:block;height:60px;border-radius:10px;transition:background .35s,padding .35s}
+#snav .sn-logo img{height:100%;width:auto;display:block}
+#snav.dark .sn-logo{background:rgba(255,255,255,.92);padding:3px 8px}
+#snav .sn-menu{flex:1;display:flex;justify-content:center;align-items:center;gap:6px}
+#snav .sn-dd{position:relative}
+#snav .sn-top{display:flex;align-items:center;gap:7px;background:none;border:0;cursor:pointer;padding:10px 14px;font-family:inherit;font-size:15px;font-weight:500;line-height:1;color:var(--fg);position:relative;transition:color .3s}
+#snav .sn-top::after{content:"";position:absolute;left:14px;right:30px;bottom:2px;height:2px;border-radius:2px;background:#8DB33A;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+#snav .sn-chev{width:6px;height:6px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .3s}
+#snav .sn-dd:hover .sn-top,#snav .sn-dd.open .sn-top,#snav .sn-dd.cur .sn-top{color:#8DB33A}
+#snav .sn-dd:hover .sn-top::after,#snav .sn-dd.open .sn-top::after,#snav .sn-dd.cur .sn-top::after{transform:scaleX(1)}
+#snav .sn-dd:hover .sn-chev,#snav .sn-dd.open .sn-chev{transform:translateY(1px) rotate(-135deg)}
+#snav .sn-panel{position:absolute;top:calc(100% + 10px);left:4px;min-width:260px;padding:8px;background:#fff;border-radius:12px;
+  box-shadow:0 20px 44px rgba(15,31,16,.16),0 0 0 1px rgba(22,54,90,.06);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .22s,transform .28s,visibility .22s}
+#snav .sn-panel::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+#snav .sn-dd:hover .sn-panel,#snav .sn-dd.open .sn-panel{opacity:1;visibility:visible;transform:none}
+#snav .sn-panel a{display:block;padding:11px 14px;border-radius:8px;font-size:15px;color:#16365A;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+#snav .sn-panel a:hover,#snav .sn-panel a.cur{background:rgba(141,179,58,.12);color:#5f8a1c}
+#snav .sn-cta{flex:none;display:inline-flex;align-items:center;padding:13px 22px;border-radius:10px;background:#8DB33A;color:#fff;text-decoration:none;font-weight:600;font-size:15px;transition:background .3s,transform .3s}
+#snav .sn-cta:hover{background:#76992b;transform:translateY(-1px)}
+#snav .sn-cta-m{display:none}
+#snav .sn-burger{display:none;margin-left:auto;width:44px;height:44px;border:0;border-radius:10px;background:rgba(255,255,255,.85);cursor:pointer;position:relative}
+#snav .sn-burger span{position:absolute;left:12px;right:12px;height:2px;background:#16365A;border-radius:2px;transition:.3s}
+#snav .sn-burger span:nth-child(1){top:15px}#snav .sn-burger span:nth-child(2){top:21px}#snav .sn-burger span:nth-child(3){top:27px}
+#snav.mopen .sn-burger span:nth-child(1){top:21px;transform:rotate(45deg)}#snav.mopen .sn-burger span:nth-child(2){opacity:0}#snav.mopen .sn-burger span:nth-child(3){top:21px;transform:rotate(-45deg)}
+@media (max-width:1000px){
+  #snav .sn-in{height:70px;padding:0 14px}
+  #snav .sn-logo{height:50px}
+  #snav .sn-burger{display:block}
+  #snav .sn-in > .sn-cta{display:none}
+  #snav .sn-menu{position:absolute;top:100%;left:10px;right:10px;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-radius:14px;padding:8px 14px 16px;
+    box-shadow:0 20px 40px rgba(15,31,16,.16);max-height:calc(100vh - 90px);overflow:auto;display:none}
+  #snav.mopen .sn-menu{display:flex}
+  #snav .sn-top{width:100%;justify-content:space-between;padding:15px 4px;font-size:16px;color:#16365A!important;border-bottom:1px solid rgba(22,54,90,.08)}
+  #snav .sn-top::after{display:none}
+  #snav .sn-panel{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;padding:4px 0 4px 8px;display:none;min-width:0}
+  #snav .sn-dd.open .sn-panel{display:block}
+  #snav .sn-dd:hover .sn-chev{transform:translateY(-2px) rotate(45deg)}
+  #snav .sn-dd.open .sn-chev{transform:translateY(1px) rotate(-135deg)}
+  #snav .sn-cta-m{display:inline-flex;justify-content:center;margin-top:14px}
+}
+
+/* smooth page transition */
+#sn-curtain{position:fixed;inset:0;z-index:2147480500;background:#fbfaf5;display:grid;place-items:center;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .26s ease,visibility 0s linear .26s}
+#sn-curtain.on{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .24s ease,visibility 0s}
+#sn-curtain.on.instant{transition:none}
+#sn-curtain:not(.on){transition:opacity .45s ease,visibility 0s linear .45s}
+#sn-curtain img{width:120px;height:auto;opacity:.9;animation:snPulse 1.2s ease-in-out infinite alternate}
+@keyframes snPulse{from{transform:scale(.94);opacity:.55}to{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){#sn-curtain,#sn-curtain.on{transition:none}#sn-curtain img{animation:none}}

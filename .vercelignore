@@ -1,0 +1,8 @@
+# not needed on Vercel (local server only)
+server.js
+serve.py
+start.bat
+# backups and leftovers
+*.bak
+*.orig
+www.alethia.earth/

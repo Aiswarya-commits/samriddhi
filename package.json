@@ -1,0 +1,13 @@
+{
+  "name": "alethia-earth-website",
+  "version": "1.0.0",
+  "description": "Alethia Earth standalone replica website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["alethia", "framer"],
+  "author": "",
+  "license": "ISC"
+}
