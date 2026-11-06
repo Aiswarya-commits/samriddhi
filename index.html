@@ -942,17 +942,17 @@
         content="We source, trade and supply agricultural commodities in bulk — from farm gate and FPOs to flour mills, feed makers, oil refiners and food companies across India and overseas.">
     <meta name="framer-search-index" content="/sites/6AN2yDPkGAirmFqcg2kbn3/searchIndex-GW9KEDWmBG1k.json">
     <meta name="framer-search-index-fallback" content="/sites/6AN2yDPkGAirmFqcg2kbn3/searchIndex-yCbubU5OOuvm.json">
-    <link href="/images/oRfXolERtzOKYMr39hpwvykRGA.png" rel="icon" media="(prefers-color-scheme: light)">
-    <link href="/images/VgsPnDDWDUnmexQen1ENwbYHpO8.png" rel="icon" media="(prefers-color-scheme: dark)">
-    <!-- Open Graph / Facebook -->
+<link rel="icon" type="image/png" href="/samriddhi-nav/favicon.png">
+<link rel="shortcut icon" href="/samriddhi-nav/favicon.ico">
+<link rel="apple-touch-icon" href="/samriddhi-nav/favicon.png">    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Alethia">
+    <meta property="og:title" content="Samriddhi Agro Trading and Exim LLP">
     <meta property="og:description"
         content="We source, trade and supply agricultural commodities in bulk — from farm gate and FPOs to flour mills, feed makers, oil refiners and food companies across India and overseas.">
     <meta property="og:image" content="/images/k8WA7briA9x0PBCfBvn6GdVLS4.png">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Alethia">
+    <meta name="twitter:title" content="Samriddhi Agro Trading and Exim LLP">
     <meta name="twitter:description"
         content="We source, trade and supply agricultural commodities in bulk — from farm gate and FPOs to flour mills, feed makers, oil refiners and food companies across India and overseas.">
     <meta name="twitter:image" content="/images/k8WA7briA9x0PBCfBvn6GdVLS4.png">
@@ -14487,6 +14487,43 @@
     color:rgb(198,241,157);white-space:nowrap;text-align:center;pointer-events:none}
 </style>
 <!-- ===== end footer wordmark ===== -->
+ <script id="samriddhi-tab-title">
+(function () {
+  var NAME = "Samriddhi Agro Trading and Exim LLP";
+  var PAGES = {
+    "/": "Samriddhi Agro \u2014 Connecting Indian Agriculture to Markets",
+    "/solutions/nature-based": "About Samriddhi | " + NAME,
+    "/solutions/supply-chain": "Quality & Compliance | " + NAME,
+    "/our-tech/amrv": "Sustainability | " + NAME,
+    "/our-company": "What We Do | " + NAME,
+    "/our-tech/blockchain": "Our Supply Chain | " + NAME,
+    "/resources/news-and-media": "Market Intelligence | " + NAME,
+    "/resources/research-and-insights": "For Buyers | " + NAME,
+    "/resources/case-studies": "For Suppliers | " + NAME,
+    "/contact": "Contact Us | " + NAME
+  };
+  function want() {
+    var path = location.pathname.replace(/\/+$/, "") || "/";
+    if (PAGES[path]) return PAGES[path];
+    var t = document.title || "";
+    if (/alethia/i.test(t)) {
+      t = t.replace(/\s*[|\-\u2013\u2014]\s*alethia\s*$/i, "").replace(/alethia/gi, "Samriddhi").trim();
+      return (t && t !== "Samriddhi") ? t + " | " + NAME : NAME;
+    }
+    return t || NAME;
+  }
+  var busy = false;
+  function fix() {
+    if (busy) return;
+    var w = want();
+    if (document.title !== w) { busy = true; document.title = w; busy = false; }
+  }
+  fix();
+  new MutationObserver(fix).observe(document.head, { childList: true, subtree: true, characterData: true });
+  window.addEventListener("popstate", function () { setTimeout(fix, 50); });
+  setInterval(fix, 1000);
+})();
+</script>
 </head>
 
 <body>
