@@ -1,0 +1,1 @@
+data:image/svg+xml,<svg display="block" role="presentation" viewBox="0 0 57 314" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 L 0 313.626 L 28.332 313.626 L 56.452 313.626 L 56.452 0 L 28.127 0 Z" fill="rgb(198, 241, 157)" height="313.625938px" id="MaAmHkp1M" transform="translate(0.148 0.414)" width="56.451562px"/></svg>
